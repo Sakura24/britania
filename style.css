@@ -1,0 +1,119 @@
+body{
+  margin: 1%; font-size: 18px; background: #4c1a38; font-family: sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0; padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  background: #260d1c; text-align: center; padding: 1%; color: white;
+  margin-bottom: 0.5%;
+  display: flex; flex-direction: row;
+}
+
+.menubar{
+  background: #260d1c; text-align: center; padding: 1%;
+}
+
+.menubar ul{
+  display: flex;flex-flow: row wrap;
+}
+
+.menubar ul li{
+  margin: 1%; padding: 1%; background: #4c1a38; flex-grow: 1;
+}
+
+.menubar ul li:hover{
+  background: #260d1c; border-radius: 20px;
+}
+
+.menubar ul li:hover a{
+  color: white;
+}
+
+.menubar ul li a{
+  color: white;
+}
+
+.menubar ul li ul{
+	display: none; position: absolute; width: 22%;
+}
+
+.menubar ul li:hover ul{
+	display: block; margin: 1% 0 0 0; background: #260d1c;
+}
+
+section{
+background: #4c1a38; color: white; margin-top: 0.5%;
+display: flex;flex-direction: row; padding: 1%;
+  justify-content: space-around;
+
+}
+
+section article{
+  background: #260d1c; width: 25%; padding: 1%; text-align: center;
+
+}
+
+section article h2{
+  background: #242424; color: white; padding: 2% 3%; text-align: center;
+}
+
+section article p{
+  margin-top: 1%; text-align: justify; text-align: center;
+}
+
+
+footer{
+  background: #4c1a38; color: white; margin-top: 0.5%;
+  display: flex;flex-flow: row wrap; padding: 1%;
+    justify-content: space-around;
+}
+
+footer article{
+  background: #260d1c; width: 25%; padding: 1%; text-align: center;
+
+}
+
+footer article h3{
+  background: #242424 ; color: white; text-align: center;
+
+}
+
+footer article p{
+  margin-top: 1%;  text-align: center; background: #260d1c;
+
+}
+
+footer article.article-image{
+  width: 25%;
+}
+
+@media all and (max-width: 600px){
+	.menubar ul, section, footer{
+		flex-direction: column;
+	}
+	section article{
+		width: 98%;
+	}
+	footer article{
+		width: 98%;
+		border-bottom: 4px black;
+	}
+	
+	footer article.article-image{
+  width: 100%;
+}
+
+	footer article: last-child{
+		border: none;
+	}
+}
